@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI
 
-from schema import Customer
+from api.schema import Customer
 
 MODEL_PATH = os.getenv("MODEL_PATH", "models/model.pkl")
 
