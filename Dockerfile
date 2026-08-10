@@ -11,5 +11,5 @@ COPY models ./models
 
 # Render/other hosts set $PORT; default to 8000 locally
 ENV PORT=8000
-WORKDIR /app/api
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT}
+WORKDIR /app
+CMD uvicorn api.main:app --host 0.0.0.0 --port ${PORT}
