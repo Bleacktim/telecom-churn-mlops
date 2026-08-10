@@ -8,7 +8,15 @@ API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 st.set_page_config(page_title="Churn Predictor", page_icon="📉")
 st.title("Telecom Churn Predictor")
 st.caption("Enter a customer's details to estimate the chance they will leave.")
-
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+.stDeployButton {display:none;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 with col1:
     gender = st.selectbox("Gender", ["Female", "Male"])
